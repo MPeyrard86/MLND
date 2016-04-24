@@ -5106,10 +5106,26 @@ Make sure to keep track of the various features and conditions you tried before 
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer</strong>: 80.02%</p>
+<p><strong>Answer</strong>: 80.02%
+This was trickier than it looked. I used the graph output to create various filters to visualize the survival data based on virtually all of the variables. I initially took a trial-and-error approach, but soon discovered that that was ineffective.</p>
+<p>So then I thought that I should try to find a sub-class of men that were successful in getting aboard the vessels. I tried using various filters based on combinations of age and socio-economic status. However, this was not especially effective, either.</p>
+<p>Eventually I found that expanding the age cutoff to 12 and filtering out children in the lowest socio-economic bracket gave met he necessary precision.</p>
 
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -5148,9 +5164,23 @@ Make sure to keep track of the various features and conditions you tried before 
 <li>Capitalization. Names tend to be capitalized.</li>
 <li>Surround sentence structure (part-of-speech). Similar to surrounding words, there are certain patterns of sentence structure that might surround a name. </li>
 </ol>
+<p>An example would be to provide the following sentence to the model: 'Hello, my name is Matthew, and I live in Canada!'. We would like to have an algorithm to apply the labels 'Person' to the entity 'Matthew', and the label 'Location' to the entity 'Canada'. We could accomplish this via a supervised machine learning algorithm by provided many labelled examples to a machine larning algorithm. Hopefully, if we use the correct features, it would learn that most of the time, whe we see the sub-phrase 'my name is X', then it knows that X is likely to be a person.</p>
 
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
