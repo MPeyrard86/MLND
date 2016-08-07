@@ -87,7 +87,7 @@ def run(alpha, gamma, epsilon, num_trials):
     # NOTE: You can set enforce_deadline=False while debugging to allow longer trials
 
     # Now simulate it
-    sim = Simulator(e, update_delay=0.5, display=True)  # create simulator (uses pygame when display=True, if available)
+    sim = Simulator(e, update_delay=0, display=False)  # create simulator (uses pygame when display=True, if available)
     # NOTE: To speed up simulation, reduce update_delay and/or set display=False
 
     sim.run(n_trials=num_trials)  # run for a specified number of trials
@@ -98,15 +98,16 @@ def run(alpha, gamma, epsilon, num_trials):
 
 if __name__ == '__main__':
     # param_values = np.arange(0,1,0.2)
-    # param_permutations = itertools.product(param_values, param_values, param_values)
+    # param_permutations = itertools.product([1.0], param_values, param_values)
     # results = dict()
-
+    #
     # for p in param_permutations:
     #     r = list()
     #     for x in range(20):
     #         r.append(run(p[0], p[1], p[2], 100))
     #     results[p] = np.mean(r)
     #
+    # print results
     # print 'Best result was: {}, where it\'s (alpha, gamma, epsilon).'.format(max(results.items(), key=lambda x: x[1]))
 
-    print run(0.6, 0, 0.2, 100)
+    run(1, 0, 0.2, 100)

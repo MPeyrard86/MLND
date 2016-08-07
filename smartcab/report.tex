@@ -1,4 +1,7 @@
 \documentclass[12pt]{article}
+
+\usepackage{multirow}
+
 \begin{document}
 
 \title{MLND Project 4: Smartcab}
@@ -36,20 +39,122 @@ As a result, over a relateivly small number of trials, the agent is capable of p
 
 \section{Improve the Q-Learning Driving Agent}
 \subsection{}
-I used Python to generate several permutations of the three parameters, and iterated over each one twenty times, storing the average accuracy.
-The most successful set of parameters on average was $\alpha = 0.6$, $\gamma = 0$, and $\epsilon = 0.2$.
-These parameters produced an average success rate of $92.95\%$.
-This is curious, because it means that we are using the rewards directly as the utility.
+I used Python to generate several permutations of the three parameters, and iterated over each one twenty times, storing the average accuracy for each one.
+The most successful set of parameters on average was $\alpha = 1$, $\gamma = 0$, and $\epsilon = 0.2$.
+These parameters produced an average success rate of $93.2\%$.
+
+That is a significant improvement over the initial set of parameters: $\alpha = 0.5$, $\gamma = 0.5$ and $\epsilon = 0.05$, which gave an average success rate of 85.7\%.
+
+Tables 1 -- 6 show the full set of results for all of the permutations of parameters. The values in the tables are the ratios of successful runs to the number of attempted runs.
+
+\vspace{2ex}
+\begin{table}[]
+\centering
+\caption{$\alpha = 0$}
+\label{}
+\begin{tabular}{|cc|ccccc|}
+\hline
+            &     &        &       & $\gamma$ &         &          \\ %\hline
+            &     & 0      & 0.2   & 0.4      & 0.6     & 0.8      \\ \hline
+            & 0   & 0.060  & 0.058 & 0.050    & 0.057   & 0.058    \\ %\hline
+            & 0.2 & 0.174  & 0.180 & 0.195    & 0.182   & 0.198    \\ %\hline
+ $\epsilon$ & 0.4 & 0.221  & 0.233 & 0.242    & 0.236   & 0.223    \\ %\hline
+            & 0.6 & 0.239  & 0.234 & 0.226    & 0.222   & 0.237    \\ %\hline
+            & 0.8 & 0.225  & 0.214 & 0.217    & 0.226   & 0.231    \\ \hline
+\end{tabular}
+\end{table}
+
+\vspace{2ex}
+\begin{table}[]
+\centering
+\caption{$\alpha = 0.2$}
+\label{}
+\begin{tabular}{|cc|ccccc|}
+\hline
+            &     &                &         & $\gamma$ &        &       \\ %\hline
+            &     & 0              & 0.2     & 0.4      & 0.6    & 0.8   \\ \hline
+            & 0   & 0.411          & 0.560   & 0.513    & 0.505  & 0.526 \\ %\hline
+            & 0.2 & \textbf{0.917} & 0.690   & 0.870    & 0.802  & 0.767 \\ %\hline
+ $\epsilon$ & 0.4 & 0.793          & 0.369   & 0.753    & 0.746  & 0.690 \\ %\hline
+            & 0.6 & 0.579          & 0.746   & 0.590    & 0.572  & 0.551 \\ %\hline
+            & 0.8 & 0.376          & 0.802   & 0.357    & 0.360  & 0.344 \\ \hline
+\end{tabular}
+\end{table}
+
+\vspace{2ex}
+\begin{table}[]
+\centering
+\caption{$\alpha = 0.4$}
+\label{}
+\begin{tabular}{|cc|ccccc|}
+\hline
+            &     &                &                & $\gamma$ &         &       \\ %\hline
+            &     & 0              & 0.2            & 0.4      & 0.6     & 0.8   \\ \hline
+            & 0   & 0.429          & 0.545          & 0.511    & 0.589   & 0.514 \\ %\hline
+            & 0.2 & \textbf{0.909} & \textbf{0.921} & 0.877    & 0.850   & 0.827 \\ %\hline
+ $\epsilon$ & 0.4 & 0.791          & 0.769          & 0.772    & 0.730   & 0.699 \\ %\hline
+            & 0.6 & 0.583          & 0.582          & 0.572    & 0.543   & 0.547 \\ %\hline
+            & 0.8 & 0.366          & 0.366          & 0.356    & 0.369   & 0.358 \\ \hline
+\end{tabular}
+\end{table}
+
+\vspace{2ex}
+\begin{table}[]
+\centering
+\caption{$\alpha = 0.6$}
+\label{}
+\begin{tabular}{|cc|ccccc|}
+\hline
+            &     &                &       & $\gamma$ &       &       \\ %\hline
+            &     & 0              & 0.2   & 0.4      & 0.6   & 0.8   \\ \hline
+            & 0   & 0.435          & 0.498 & 0.447    & 0.484 & 0.425 \\ %\hline
+            & 0.2 & \textbf{0.922} & 0.893 & 0.861    & 0.857 & 0.812 \\ %\hline
+ $\epsilon$ & 0.4 & 0.783          & 0.758 & 0.742    & 0.733 & 0.681 \\ %\hline
+            & 0.6 & 0.576          & 0.571 & 0.562    & 0.541 & 0.528 \\ %\hline
+            & 0.8 & 0.370          & 0.375 & 0.370    & 0.372 & 0.327 \\ \hline
+\end{tabular}
+\end{table}
+
+\vspace{2ex}
+\begin{table}[]
+\centering
+\caption{$\alpha = 0.8$}
+\label{}
+\begin{tabular}{|cc|ccccc|}
+\hline
+            &     &                &       & $\gamma$ &       &       \\ %\hline
+            &     & 0              & 0.2   & 0.4      & 0.6   & 0.8   \\ \hline
+            & 0   & 0.439          & 0.525 & 0.401    & 0.487 & 0.411 \\ %\hline
+            & 0.2 & \textbf{0.926} & 0.896 & 0.873    & 0.850 & 0.808 \\ %\hline
+ $\epsilon$ & 0.4 & 0.775          & 0.767 & 0.753    & 0.690 & 0.652 \\ %\hline
+            & 0.6 & 0.572          & 0.561 & 0.573    & 0.510 & 0.487 \\ %\hline
+            & 0.8 & 0.383          & 0.368 & 0.346    & 0.338 & 0.337 \\ \hline
+\end{tabular}
+\end{table}
+
+\vspace{2ex}
+\begin{table}[]
+\centering
+\caption{$\alpha = 1$}
+\label{}
+\begin{tabular}{|cc|ccccc|}
+\hline
+            &     &                &                & $\gamma$ &       &       \\ %\hline
+            &     & 0              & 0.2            & 0.4      & 0.6   & 0.8   \\ \hline
+            & 0   & 0.402          & 0.579          & 0.343    & 0.481 & 0.377 \\ %\hline
+            & 0.2 & \textbf{0.932} & \textbf{0.903} & 0.844    & 0.816 & 0.761 \\ %\hline
+ $\epsilon$ & 0.4 & 0.797          & 0.764          & 0.705    & 0.677 & 0.634 \\ %\hline
+            & 0.6 & 0.587          & 0.547          & 0.517    & 0.509 & 0.486 \\ %\hline
+            & 0.8 & 0.372          & 0.366          & 0.342    & 0.334 & 0.316 \\ \hline
+\end{tabular}
+\end{table}
 
 \subsection{}
-The agent not only peforms extremely well with these parameters, but it also seems to learn much faster than with other configurations that I have observed.
-It very quickly learns to follow the waypoints and to obey the traffic laws.
-However, the relatively high epsilon value does allow it to make some mistakes on a relatiely frequent basis.
-I suspect that it might be wise to have the value of epsilon decay over time while the agent is receiving positive feedback.
+I would describe an optimal policy as one where the epsilon value decays over time as the algorithm becomes more successful.
+I would also say that the algorithm should be capable of deviating from the navigated plan in select scenarios. 
+The primary scenario for this rule would be if the destination is such that the vehicle could just as easily move right as it could move forward.
+If the vehicle is stuck at a red light, then it could prematurely move right and hope for better luck on the green lights when it needs to move forward.
 
-I also believe that the policy is not entirely optimal.
-It seems that the agent tends to spend a lot of time waiting at red lights.
-If the agent knew its position and the destination, then it might be possible for it to learn that turning right at a red light might allow it to reach the goal faster.
-However, in order for it to be able to accomplish this, it would be required to have a dynamic reward based on its time remaining, and possibly not be punished for deviating from the assigned route.
+The current solution is for the epsilon value to be static, which allows the algorithm to continue making mistakes after the utility values have reached a highly optimal state.
 
 \end{document}
