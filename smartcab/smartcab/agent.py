@@ -93,7 +93,7 @@ def run(alpha, gamma, epsilon, num_trials):
     sim.run(n_trials=num_trials)  # run for a specified number of trials
     # NOTE: To quit midway, press Esc or close pygame window, or hit Ctrl+C on the command-line
 
-    return e.num_success / float(num_trials)
+    #return e.num_success / float(num_trials)
 
 
 if __name__ == '__main__':

@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b171e44-d8e6-405c-a23a-ed5eb0ecda5b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smartcab/agent.py" afterPath="$PROJECT_DIR$/smartcab/agent.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smartcab/environment.py" afterPath="$PROJECT_DIR$/smartcab/environment.py" />
     </list>
     <ignored path="smartcab.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,11 +22,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="agent.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="agent.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/smartcab/agent.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="89" column="39" selection-start-line="89" selection-start-column="39" selection-end-line="89" selection-end-column="39" />
+            <state relative-caret-position="405">
+              <caret line="96" column="0" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
               <folding>
                 <element signature="e#0#16#0" expanded="true" />
               </folding>
@@ -49,11 +46,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="environment.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="environment.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/smartcab/environment.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
-              <caret line="211" column="22" selection-start-line="211" selection-start-column="16" selection-end-line="211" selection-end-column="22" />
+            <state relative-caret-position="195">
+              <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="38" selection-end-column="28" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -509,22 +506,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/smartcab/agent.py">
+    <entry file="file://$PROJECT_DIR$/smartcab/environment.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
-          <caret line="89" column="39" selection-start-line="89" selection-start-column="39" selection-end-line="89" selection-end-column="39" />
+          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="38" selection-end-column="28" />
           <folding>
-            <element signature="e#0#16#0" expanded="true" />
+            <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/smartcab/environment.py">
+    <entry file="file://$PROJECT_DIR$/smartcab/agent.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="211" column="22" selection-start-line="211" selection-start-column="16" selection-end-line="211" selection-end-column="22" />
+        <state relative-caret-position="405">
+          <caret line="96" column="0" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
           <folding>
-            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#0#16#0" expanded="true" />
           </folding>
         </state>
       </provider>
