@@ -4,13 +4,8 @@
     <list default="true" id="0b171e44-d8e6-405c-a23a-ed5eb0ecda5b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report.pdf" afterPath="$PROJECT_DIR$/report.pdf" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report.aux" afterPath="$PROJECT_DIR$/report.aux" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report.log" afterPath="$PROJECT_DIR$/report.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report.tex" afterPath="$PROJECT_DIR$/report.tex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smartcab/agent.py" afterPath="$PROJECT_DIR$/smartcab/agent.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smartcab/environment.py" afterPath="$PROJECT_DIR$/smartcab/environment.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smartcab/planner.py" afterPath="$PROJECT_DIR$/smartcab/planner.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smartcab/simulator.py" afterPath="$PROJECT_DIR$/smartcab/simulator.py" />
     </list>
     <ignored path="smartcab.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,8 +28,8 @@
       <file leaf-file-name="agent.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/smartcab/agent.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="112" column="4" selection-start-line="112" selection-start-column="4" selection-end-line="112" selection-end-column="4" />
+            <state relative-caret-position="290">
+              <caret line="94" column="0" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
               <folding>
                 <element signature="e#0#16#0" expanded="true" />
               </folding>
@@ -45,7 +40,7 @@
       <file leaf-file-name="simulator.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/smartcab/simulator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="245">
+            <state relative-caret-position="0">
               <caret line="64" column="13" selection-start-line="64" selection-start-column="13" selection-end-line="64" selection-end-column="13" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
@@ -57,7 +52,7 @@
       <file leaf-file-name="planner.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/smartcab/planner.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
+            <state relative-caret-position="-10">
               <caret line="12" column="9" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
               <folding />
             </state>
@@ -67,7 +62,7 @@
       <file leaf-file-name="environment.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/smartcab/environment.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="444">
+            <state relative-caret-position="-10">
               <caret line="225" column="17" selection-start-line="225" selection-start-column="17" selection-end-line="225" selection-end-column="17" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
@@ -361,11 +356,11 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4277929" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4277929" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39872843" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36875567" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -394,13 +389,8 @@
           <url>file://$PROJECT_DIR$/smartcab/simulator.py</url>
           <line>59</line>
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/smartcab/agent.py</url>
-          <line>109</line>
-          <option name="timeStamp" value="27" />
-        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="28" />
+      <option name="time" value="29" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
@@ -467,6 +457,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -492,6 +483,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
           <caret line="939" column="0" selection-start-line="939" selection-start-column="0" selection-end-line="939" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -511,7 +503,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/smartcab/simulator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
+        <state relative-caret-position="0">
           <caret line="64" column="13" selection-start-line="64" selection-start-column="13" selection-end-line="64" selection-end-column="13" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
@@ -521,7 +513,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/smartcab/planner.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
+        <state relative-caret-position="-10">
           <caret line="12" column="9" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
           <folding />
         </state>
@@ -529,7 +521,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/smartcab/environment.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="444">
+        <state relative-caret-position="-10">
           <caret line="225" column="17" selection-start-line="225" selection-start-column="17" selection-end-line="225" selection-end-column="17" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
@@ -539,8 +531,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/smartcab/agent.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="112" column="4" selection-start-line="112" selection-start-column="4" selection-end-line="112" selection-end-column="4" />
+        <state relative-caret-position="290">
+          <caret line="94" column="0" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
           <folding>
             <element signature="e#0#16#0" expanded="true" />
           </folding>

@@ -155,6 +155,73 @@ I would also say that the algorithm should be capable of deviating from the navi
 The primary scenario for this rule would be if the destination is such that the vehicle could just as easily move right as it could move forward.
 If the vehicle is stuck at a red light, then it could prematurely move right and hope for better luck on the green lights when it needs to move forward.
 
-The current solution is for the epsilon value to be static, which allows the algorithm to continue making mistakes after the utility values have reached a highly optimal state.
+The current solution is for the epsilon value to be static, which allows the algorithm to continue making mistakes after the utility values have reached a highly optimal state. There is another flaw in this approach, as highlighted by the final Q-Table:
+
+{\tiny
+\begin{verbatim}
+q_values = {dict} {(True, False, False, True, 'right'): 
+ __len__ = {int} 48
+ (False, False, False, False, 'forward') (139668377331376) = {dict} {'forward': 0.0, 'right': 0.0, None: 0.0, 'left': 0.0}
+ (False, False, False, False, 'left') (139668377331184) = {dict} {'forward': 0.0, 'right': 0.0, None: 0.0, 'left': 0.0}
+ (False, False, False, False, 'right') (139668377331280) = {dict} {'forward': 0.0, 'right': 0.0, None: 0.0, 'left': 0.0}
+ (False, False, False, True, 'forward') (139668377331088) = {dict} {'forward': 0.0, 'right': 0.0, None: 0.0, 'left': 0.0}
+ (False, False, False, True, 'left') (139668377330896) = {dict} {'forward': 0.0, 'right': 0.0, None: 0.0, 'left': 0.0}
+ (False, False, False, True, 'right') (139668377330992) = {dict} {'forward': 0.0, 'right': 0.0, None: 0.0, 'left': 0.0}
+ (False, False, True, False, 'forward') (139668377330800) = {dict} {'forward': 0.0, 'right': 0.0, None: 0.0, 'left': 0.0}
+ (False, False, True, False, 'left') (139668377330608) = {dict} {'forward': 0.0, 'right': 0.0, None: 0.0, 'left': 0.0}
+ (False, False, True, False, 'right') (139668377330704) = {dict} {'forward': 0.0, 'right': 0.0, None: 0.0, 'left': 0.0}
+ (False, False, True, True, 'forward') (139668377330512) = {dict} {'forward': -1.0, 'right': -0.5, None: 0.0, 'left': 0.0}
+ (False, False, True, True, 'left') (139668377330320) = {dict} {'forward': 0.0, 'right': 0.0, None: 0.0, 'left': 0.0}
+ (False, False, True, True, 'right') (139668377330416) = {dict} {'forward': -1.0, 'right': 2.0, None: 0.0, 'left': 0.0}
+ (False, True, False, False, 'forward') (139668377330224) = {dict} {'forward': 0.0, 'right': 0.0, None: 0.0, 'left': 0.0}
+ (False, True, False, False, 'left') (139668377330032) = {dict} {'forward': 0.0, 'right': 0.0, None: 0.0, 'left': 0.0}
+ (False, True, False, False, 'right') (139668377330128) = {dict} {'forward': -1.0, 'right': 0.0, None: 0.0, 'left': 0.0}
+ (False, True, False, True, 'forward') (139668377329936) = {dict} {'forward': -1.0, 'right': -0.5, None: 0.0, 'left': -1.0}
+ (False, True, False, True, 'left') (139668377329744) = {dict} {'forward': -1.0, 'right': 0.0, None: 0.0, 'left': 0.0}
+ (False, True, False, True, 'right') (139668377329840) = {dict} {'forward': 0.0, 'right': 0.0, None: 0.0, 'left': 0.0}
+ (False, True, True, False, 'forward') (139668377284528) = {dict} {'forward': -1.0, 'right': -0.5, None: 0.0, 'left': 0.0}
+ (False, True, True, False, 'left') (139668377284336) = {dict} {'forward': 0.0, 'right': 0.0, None: 0.0, 'left': 0.0}
+ (False, True, True, False, 'right') (139668377284432) = {dict} {'forward': -1.0, 'right': 2.0, None: 0.0, 'left': -1.0}
+ (False, True, True, True, 'forward') (139668377284240) = {dict} {'forward': -1.0, 'right': -0.5, None: 0.0, 'left': -1.0}
+ (False, True, True, True, 'left') (139668377284048) = {dict} {'forward': -1.0, 'right': -0.5, None: 0.0, 'left': -1.0}
+ (False, True, True, True, 'right') (139668377284144) = {dict} {'forward': -1.0, 'right': 2.0, None: 0.0, 'left': -1.0}
+ (True, False, False, False, 'forward') (139668377283952) = {dict} {'forward': 0.0, 'right': 0.0, None: 0.0, 'left': 0.0}
+ (True, False, False, False, 'left') (139668377283760) = {dict} {'forward': 0.0, 'right': 0.0, None: 0.0, 'left': 0.0}
+ (True, False, False, False, 'right') (139668377283856) = {dict} {'forward': 0.0, 'right': 0.0, None: 0.0, 'left': 0.0}
+ (True, False, False, True, 'forward') (139668377283664) = {dict} {'forward': 0.0, 'right': 0.0, None: 0.0, 'left': 0.0}
+ (True, False, False, True, 'left') (139668377283472) = {dict} {'forward': 0.0, 'right': 0.0, None: 0.0, 'left': 0.0}
+ (True, False, False, True, 'right') (139668377283568) = {dict} {'forward': 0.0, 'right': 0.0, None: 0.0, 'left': 0.0}
+ (True, False, True, False, 'forward') (139668377283376) = {dict} {'forward': 0.0, 'right': 0.0, None: 0.0, 'left': 0.0}
+ (True, False, True, False, 'left') (139668377283184) = {dict} {'forward': 0.0, 'right': 0.0, None: 0.0, 'left': 0.0}
+ (True, False, True, False, 'right') (139668377283280) = {dict} {'forward': 0.0, 'right': 0.0, None: 0.0, 'left': 0.0}
+ (True, False, True, True, 'forward') (139668377283088) = {dict} {'forward': 2.0, 'right': -0.5, None: 0.0, 'left': -0.5}
+ (True, False, True, True, 'left') (139668377282896) = {dict} {'forward': -0.5, 'right': -0.5, None: 0.0, 'left': 12.0}
+ (True, False, True, True, 'right') (139668377282992) = {dict} {'forward': -0.5, 'right': 0.0, None: 0.0, 'left': 0.0}
+ (True, True, False, False, 'forward') (139668377282800) = {dict} {'forward': 0.0, 'right': 0.0, None: 0.0, 'left': 0.0}
+ (True, True, False, False, 'left') (139668377282608) = {dict} {'forward': 0.0, 'right': 0.0, None: 0.0, 'left': 0.0}
+ (True, True, False, False, 'right') (139668377282704) = {dict} {'forward': 0.0, 'right': 0.0, None: 0.0, 'left': 0.0}
+ (True, True, False, True, 'forward') (139668377282512) = {dict} {'forward': 2.0, 'right': 0.0, None: 0.0, 'left': -0.5}
+ (True, True, False, True, 'left') (139668377282320) = {dict} {'forward': -0.5, 'right': -0.5, None: 0.0, 'left': 0.0}
+ (True, True, False, True, 'right') (139668377282416) = {dict} {'forward': -0.5, 'right': 0.0, None: 0.0, 'left': 0.0}
+ (True, True, True, False, 'forward') (139668377282224) = {dict} {'forward': 2.0, 'right': -0.5, None: 0.0, 'left': 0.0}
+ (True, True, True, False, 'left') (139668377282032) = {dict} {'forward': -0.5, 'right': 0.0, None: 0.0, 'left': 0.0}
+ (True, True, True, False, 'right') (139668377282128) = {dict} {'forward': 0.0, 'right': 0.0, None: 0.0, 'left': 0.0}
+ (True, True, True, True, 'forward') (139668377281936) = {dict} {'forward': 12.0, 'right': -0.5, None: 0.0, 'left': -0.5}
+ (True, True, True, True, 'left') (139668377567152) = {dict} {'forward': -0.5, 'right': -0.5, None: 0.0, 'left': 2.0}
+ (True, True, True, True, 'right') (139668377281360) = {dict} {'forward': -0.5, 'right': 2.0, None: 0.0, 'left': -0.5}
+\end{verbatim}
+}
+
+The final table is interesting because we can see many instances where the algorithm didn't fully explore the possible states.
+There are far too many utility values that remain at 0.
+There does not appear to be any states that exist that would allow the agent to violate any traffic laws, however I can see some instances of sub-optimal behavior.
+For example, in instances where several options are tied at a utility value of 0, then the algorithm will choose to do nothing. 
+This works out in its favor in many instances, as it prevents it from running a red light or causing an accident, but this is not ideal when the way is clear.
+This appears to be a failure of the policy to explore and discover sub-optimal choices early on.
+If the algorithm were to explore these options more eagerly, then there would be far fewer ties that need to be broken, and the optimal choices would naturally appear either by discovering them by accident, or by process of elimination.
+
+Therefore, I see two options:
+First, if the value of $\epsilon$ were to be initialized to a high value and allowed to decay slowly over time, then these options would be explored more thoroughly early on in the process, but tamed later on when the Q-table is in a more proficient state.
+Second, if ties were broken randomly, then we could also force the algorithm to flesh out more of the possible actions.
 
 \end{document}
